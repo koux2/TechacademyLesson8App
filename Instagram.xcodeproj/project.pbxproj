@@ -12,9 +12,9 @@
 		D122183D261AD37A00F7297C /* ImageSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D122183C261AD37A00F7297C /* ImageSelectViewController.swift */; };
 		D1221840261AD38300F7297C /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D122183F261AD38300F7297C /* PostViewController.swift */; };
 		D1221843261AD38C00F7297C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1221842261AD38C00F7297C /* SettingViewController.swift */; };
+		D122184C261ADC2100F7297C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D122184B261ADC2100F7297C /* TabBarController.swift */; };
 		D1CEA6C92610C85700275218 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CEA6C82610C85700275218 /* AppDelegate.swift */; };
 		D1CEA6CB2610C85700275218 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CEA6CA2610C85700275218 /* SceneDelegate.swift */; };
-		D1CEA6CD2610C85700275218 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CEA6CC2610C85700275218 /* ViewController.swift */; };
 		D1CEA6D02610C85700275218 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1CEA6CE2610C85700275218 /* Main.storyboard */; };
 		D1CEA6D22610C85800275218 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1CEA6D12610C85800275218 /* Assets.xcassets */; };
 		D1CEA6D52610C85800275218 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1CEA6D32610C85800275218 /* LaunchScreen.storyboard */; };
@@ -26,10 +26,10 @@
 		D122183C261AD37A00F7297C /* ImageSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectViewController.swift; sourceTree = "<group>"; };
 		D122183F261AD38300F7297C /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		D1221842261AD38C00F7297C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		D122184B261ADC2100F7297C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D1CEA6C52610C85700275218 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1CEA6C82610C85700275218 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1CEA6CA2610C85700275218 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D1CEA6CC2610C85700275218 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D1CEA6CF2610C85700275218 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D1CEA6D12610C85800275218 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1CEA6D42610C85800275218 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,12 +68,12 @@
 			children = (
 				D1CEA6C82610C85700275218 /* AppDelegate.swift */,
 				D1CEA6CA2610C85700275218 /* SceneDelegate.swift */,
-				D1CEA6CC2610C85700275218 /* ViewController.swift */,
 				D1221836261AD36200F7297C /* LoginViewController.swift */,
 				D1221839261AD36F00F7297C /* HomeViewController.swift */,
 				D122183C261AD37A00F7297C /* ImageSelectViewController.swift */,
 				D122183F261AD38300F7297C /* PostViewController.swift */,
 				D1221842261AD38C00F7297C /* SettingViewController.swift */,
+				D122184B261ADC2100F7297C /* TabBarController.swift */,
 				D1CEA6CE2610C85700275218 /* Main.storyboard */,
 				D1CEA6D12610C85800275218 /* Assets.xcassets */,
 				D1CEA6D32610C85800275218 /* LaunchScreen.storyboard */,
@@ -153,11 +153,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D122183D261AD37A00F7297C /* ImageSelectViewController.swift in Sources */,
+				D122184C261ADC2100F7297C /* TabBarController.swift in Sources */,
 				D122183A261AD36F00F7297C /* HomeViewController.swift in Sources */,
 				D1221840261AD38300F7297C /* PostViewController.swift in Sources */,
 				D1221843261AD38C00F7297C /* SettingViewController.swift in Sources */,
 				D1221837261AD36200F7297C /* LoginViewController.swift in Sources */,
-				D1CEA6CD2610C85700275218 /* ViewController.swift in Sources */,
 				D1CEA6C92610C85700275218 /* AppDelegate.swift in Sources */,
 				D1CEA6CB2610C85700275218 /* SceneDelegate.swift in Sources */,
 			);
