@@ -37,16 +37,19 @@ class ImageSelectViewController: UIViewController, UIImagePickerControllerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
+    // 写真を撮影/選択したときに呼ばれるメソッド
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        // 撮影/選択された画像を取得する
-        let image = info[.originalImage] as! UIImage
-        
-        // あとで加工
-        print("DEBUG_PRINT: image = \(image)")
+        if info[.originalImage] != nil {
+            // 撮影/選択された画像を取得する
+            let image = info[.originalImage] as! UIImage
+            print("DEBUG_PRINT: image = \(image)")
+
+            let postViewController = storyboard?.instantiateViewController(withIdentifier: "Post") as! PostViewController
+            postViewController.image = image
+            picker.present(postViewController, animated: true, completion: nil)
+        }
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
