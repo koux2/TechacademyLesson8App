@@ -74,6 +74,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         // セル内のボタンのアクションを設定する
         cell.likeButton.addTarget(self, action: #selector(handleButton(_:forEvent:)), for: .touchUpInside)
+        cell.commentButton.addTarget(self, action: #selector(handleComment(_:forEvent:)), for: .touchUpInside)
         
         return cell
     }
@@ -106,5 +107,46 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let postRef = Firestore.firestore().collection(Const.PostPath).document(postData.id)
             postRef.updateData(["likes": updateValue])
         }
+    }
+    
+    @objc func handleComment(_ sender: UIButton, forEvent event: UIEvent) {
+        print("DEBUG_PRINT: commentボタンがタップされました")
+        
+        // タップされたセルのインデックスを求める
+        let touch = event.allTouches?.first
+        let point = touch!.location(in: tableView)
+        let indexPath = tableView.indexPathForRow(at: point)
+        
+        // 配列からタップされたインデックスのデータを取り出す
+        let postData = postArray[indexPath!.row]
+        
+        // Alertを表示してコメント入力を求める。
+        let alertController = UIAlertController(title: "コメント送信", message: "", preferredStyle: .alert)
+        // コメント入力用テキストフィールド追加
+        alertController.addTextField { (textField) in
+            textField.placeholder = "コメントを入力してください"
+        }
+        
+        // 送信ボタン追加
+        alertController.addAction(UIAlertAction(title: "送信", style: .default, handler: { (action) in
+            // 入力されたコメント文字を取得
+            let commentText = alertController.textFields![0].text!
+            
+            let name = Auth.auth().currentUser!.displayName!
+            // 更新データを作成する
+            let updateValue = FieldValue.arrayUnion(["\(name): \(commentText)"])
+            
+            // likesに更新データを書き込む
+            let postRef = Firestore.firestore().collection(Const.PostPath).document(postData.id)
+            postRef.updateData(["comments": updateValue])
+        }))
+        
+        // キャンセルボタン追加
+        alertController.addAction(UIAlertAction(title: "キャンセル", style: .cancel, handler: { (action) in
+            // キャンセルは何もしない
+        }))
+        
+        // Alert表示
+        present(alertController, animated: true)
     }
 }
