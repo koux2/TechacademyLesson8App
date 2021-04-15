@@ -214,10 +214,25 @@
                     <view key="view" contentMode="scaleToFill" id="O8C-5e-AIr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DR2-ht-JHO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Sqd-43-WVE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DR2-ht-JHO" firstAttribute="leading" secondItem="Sqd-43-WVE" secondAttribute="leading" id="0Ve-Ji-B1E"/>
+                            <constraint firstItem="DR2-ht-JHO" firstAttribute="top" secondItem="Sqd-43-WVE" secondAttribute="top" id="2Xv-Y7-hWZ"/>
+                            <constraint firstItem="Sqd-43-WVE" firstAttribute="bottom" secondItem="DR2-ht-JHO" secondAttribute="bottom" id="kKl-p2-xhY"/>
+                            <constraint firstItem="Sqd-43-WVE" firstAttribute="trailing" secondItem="DR2-ht-JHO" secondAttribute="trailing" id="pSb-4y-u8M"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="ホーム" image="home" id="ona-Cn-cRe"/>
+                    <connections>
+                        <outlet property="tableView" destination="DR2-ht-JHO" id="HNf-nu-5vk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Deq-TZ-N5I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
